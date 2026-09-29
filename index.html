@@ -3,18 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construction Portfolio</title>
+    <title>Apex Builders & Engineering</title>
     <style>
-        body { background-color: #0b0c10; color: #00E5FF; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
-        .container { text-align: center; border: 1px solid #00E5FF; padding: 40px; border-radius: 12px; box-shadow: 0 0 30px rgba(0,229,255,0.2); }
-        h1 { margin: 0 0 10px 0; font-weight: 600; letter-spacing: 1px; }
-        p { color: #868b9c; margin: 0; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; }
+        :root {
+            --primary: #f59e0b; /* Construction Gold */
+            --dark: #0f172a;    /* Deep Slate */
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--light);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: var(--dark);
+            color: white;
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); letter-spacing: 1px;}
+        nav a { color: white; text-decoration: none; margin-left: 1.5rem; font-weight: 500; transition: color 0.3s;}
+        nav a:hover { color: var(--primary); }
+        
+        .hero {
+            /* Using a high-quality construction image from Unsplash as background */
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1541888086425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            padding: 120px 5%;
+            text-align: center;
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 15px; margin-top: 0; line-height: 1.2;}
+        .hero p { font-size: 1.2rem; margin-bottom: 35px; color: #cbd5e1; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;}
+        .btn {
+            background-color: var(--primary);
+            color: var(--dark);
+            padding: 14px 28px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .btn:hover { background-color: #d97706; color: white; transform: translateY(-2px); }
+        
+        .services { padding: 80px 5%; text-align: center; flex: 1; }
+        .services h2 { color: var(--dark); margin-bottom: 50px; font-size: 2.2rem; margin-top: 0;}
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;}
+        .card { background: white; padding: 40px 30px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); transition: transform 0.3s;}
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--dark); margin-top: 0; font-size: 1.3rem;}
+        .card p { color: var(--gray); line-height: 1.6; margin-bottom: 0;}
+        
+        footer { background-color: var(--dark); color: var(--gray); text-align: center; padding: 30px 5%; margin-top: auto; border-top: 1px solid #1e293b;}
+        .signature { margin-top: 15px; font-size: 0.95rem; color: var(--primary); font-weight: 500; letter-spacing: 1px;}
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>CI/CD Pipeline Successfully Anchored</h1>
-        <p>Awaiting Client Assets & Frontend Injection</p>
-    </div>
+    <header>
+        <div class="logo">APEX BUILDERS</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Building the Future,<br>Restoring the Past</h1>
+        <p>Premier construction and engineering services in Kenya. Delivering quality commercial and residential projects on time and within budget.</p>
+        <a href="#" class="btn">View Our Portfolio</a>
+    </section>
+
+    <section class="services">
+        <h2>Our Core Expertise</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Commercial Construction</h3>
+                <p>High-rise office buildings, retail spaces, and industrial warehouses built to exact specifications and safety standards.</p>
+            </div>
+            <div class="card">
+                <h3>Residential Development</h3>
+                <p>Custom homes and multi-unit estates designed for modern living, comfort, and multi-generational structural longevity.</p>
+            </div>
+            <div class="card">
+                <h3>Civil Engineering</h3>
+                <p>Heavy infrastructure projects including road works, bulk earthworks, drainage systems, and structural foundations.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Apex Builders Kenya. All Rights Reserved.</p>
+        <div class="signature">Designed by Gabriel</div>
+    </footer>
 </body>
 </html>
