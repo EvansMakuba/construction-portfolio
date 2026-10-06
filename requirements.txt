@@ -3,3 +3,4 @@ uvicorn
 pydantic
 numpy
 psycopg2-binary
+sqlalchemy
